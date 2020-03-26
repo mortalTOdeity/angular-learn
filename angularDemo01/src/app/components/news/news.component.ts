@@ -11,16 +11,19 @@ export class NewsComponent implements OnInit {
   // 省略public 默认为public
   msg = '我是新闻组件的msg'
 
+  //类型绑定
   public name: string = '张三'
 
   // 绑定任何类型
   public item: any = 123
 
-  public userInfo: object = {
+  // 绑定对象
+  public userinfo: object = {
     username: 'lizi',
     age: 30
   }
 
+  // 绑定类型之后不赋值
   public message: any
 
   constructor() {
