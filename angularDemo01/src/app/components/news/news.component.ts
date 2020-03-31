@@ -23,8 +23,14 @@ export class NewsComponent implements OnInit {
     age: 30
   }
 
+  public arr = [1, 2, 3]
+
   // 绑定类型之后不赋值
   public message: any
+
+
+  //绑定html
+  public content: any = '<h2>我是html标签</h2>'
 
   constructor() {
     this.message = 'the message'

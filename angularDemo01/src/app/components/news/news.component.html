@@ -1,4 +1,6 @@
 <app-header></app-header>
+
+<h1>模板里绑定数据</h1>
 <h2>asdasdsa</h2>
 <h2>{{title}}</h2>
 <h3>{{msg}}</h3>
@@ -11,6 +13,14 @@
 
 <br>
 
-<div>
+<h1>模板里绑定属性</h1>
+<div title="我是一个div">
   我是lizi，不信你可以指上来看一看
 </div>
+
+<span [innerHTML]="content" class="l-span">{{content}}</span>
+<ol>
+  <li *ngFor='let item of arr; let key = index'>
+    {{item}}---{{key}}
+  </li>
+</ol>
