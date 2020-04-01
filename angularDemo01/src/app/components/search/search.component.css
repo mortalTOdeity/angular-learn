@@ -1,0 +1,16 @@
+.search{
+  width: 400px;
+  margin: 20px auto;
+
+}
+.theInput{
+  margin-bottom: 20px;
+  width: 300px;
+  height: 32px;
+}
+
+.theButton {
+  height: 32px;
+  width: 80px;
+  margin-left: 10px; 
+}

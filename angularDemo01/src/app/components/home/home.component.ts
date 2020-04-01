@@ -12,9 +12,33 @@ export class HomeComponent implements OnInit {
 
   public orderStatus: number = 1
 
-  constructor() { }
+  public today: any = new Date()
+
+  public keywords: string
+
+  constructor() {
+    console.log(this.today);
+
+  }
 
   ngOnInit(): void {
   }
 
+  run() {
+    alert('方法！！')
+  }
+  getData() {
+    alert(this.today)
+  }
+  logData() {
+    console.log('fuck you!!');
+  }
+  getEvent(e) {
+    if (e.keyCode == 13) {
+      console.log('按了一下回车');
+    }
+    else {
+      console.log(e);
+    }
+  }
 }

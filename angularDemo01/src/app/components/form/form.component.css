@@ -1,0 +1,20 @@
+.header {
+  text-align: center;
+}
+
+.peopleList{
+  width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #eee;
+}
+
+li {
+  height:50px;
+  line-height: 50px;
+}
+.formInput {
+  width: 300px;
+  height: 28px;
+}
+

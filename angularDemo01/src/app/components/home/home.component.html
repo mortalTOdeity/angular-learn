@@ -11,3 +11,18 @@
   <div *ngSwitchCase="3">output3</div>
   <div *ngSwitchDefault>output</div>
 </div>
+<p [ngStyle]="{'color': 'red'}">
+  可能是红色
+</p>
+
+<br>
+<span>{{today | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+<button (click)="getData()">方法</button>
+<input type="text" (keyup)="logData()">
+<hr>
+<input type="text" (keyup)="getEvent($event)">
+<hr>
+<input type="text" [(ngModel)]="keywords">
+{{keywords}}
+
+<!-- <span>{{keyInput}}></span> -->
