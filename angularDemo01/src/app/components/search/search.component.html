@@ -1,10 +1,25 @@
+<h2 class="title">TodoList</h2>
+<p>{{name}}</p>
 <div class="search">
-  <input type="text" class="theInput" [(ngModel)]="keywords">
-  <button class="theButton" (click)="doSearch()">搜索</button>
-
+  <input type="text" class="theInput" [(ngModel)]="keywords" (keyup)="doAdd($event.keyCode)">
+  <button class="theButton" (click)="doAddBtn()">添加</button>
   <hr>
+  <h3>待办事项</h3>
 
   <ul>
-    <li>列表</li>
+    <li *ngFor="let item of historyList
+    let key = index" [hidden]="item.made==1">
+      <input type="checkbox" [(ngModel)]="item.status" (click)='Printer()'>{{item.title}}<button
+        (click)="deleteHistory(key)" class="theButton">X</button>
+    </li>
+  </ul>
+  <h3>已完成事项</h3>
+
+  <ul>
+    <li *ngFor="let item of historyList
+    let key = index" [hidden]="item.made==0">
+      <input type="checkbox" [(ngModel)]="item.status" (click)='Printer()'>{{item.title}}<button
+        (click)="deleteHistory(key)" class="theButton">X</button>
+    </li>
   </ul>
 </div>
