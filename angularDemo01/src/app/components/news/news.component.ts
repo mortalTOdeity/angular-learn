@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-news',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
+
+  // 获取一个组件
+  @ViewChild('header') header: any
+
 
   public title = '我是一个新闻组件'
   // 省略public 默认为public
@@ -28,7 +32,6 @@ export class NewsComponent implements OnInit {
   // 绑定类型之后不赋值
   public message: any
 
-
   //绑定html
   public content: any = '<h2>我是html标签</h2>'
 
@@ -39,6 +42,11 @@ export class NewsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+
+    this.header.run()
   }
 
 }

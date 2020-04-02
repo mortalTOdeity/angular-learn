@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormComponent } from './components/form/form.component';
 import { SearchComponent } from './components/search/search.component';
+import { StorageService } from './services/storage.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { SearchComponent } from './components/search/search.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

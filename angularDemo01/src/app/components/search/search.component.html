@@ -1,5 +1,4 @@
 <h2 class="title">TodoList</h2>
-<p>{{name}}</p>
 <div class="search">
   <input type="text" class="theInput" [(ngModel)]="keywords" (keyup)="doAdd($event.keyCode)">
   <button class="theButton" (click)="doAddBtn()">添加</button>
@@ -8,18 +7,18 @@
 
   <ul>
     <li *ngFor="let item of historyList
-    let key = index" [hidden]="item.made==1">
-      <input type="checkbox" [(ngModel)]="item.status" (click)='Printer()'>{{item.title}}<button
-        (click)="deleteHistory(key)" class="theButton">X</button>
+    let key = index" [hidden]="item.status==1">
+      <input type="checkbox" [(ngModel)]="item.status">{{item.title}}<button (click)="deleteHistory(key)"
+        class="theButton">X</button>
     </li>
   </ul>
   <h3>已完成事项</h3>
 
   <ul>
     <li *ngFor="let item of historyList
-    let key = index" [hidden]="item.made==0">
-      <input type="checkbox" [(ngModel)]="item.status" (click)='Printer()'>{{item.title}}<button
-        (click)="deleteHistory(key)" class="theButton">X</button>
+    let key = index" [hidden]="item.status==0">
+      <input type="checkbox" [(ngModel)]="item.status">{{item.title}}<button (click)="deleteHistory(key)"
+        class="theButton">X</button>
     </li>
   </ul>
 </div>
