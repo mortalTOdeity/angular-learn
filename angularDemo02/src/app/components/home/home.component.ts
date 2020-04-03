@@ -16,7 +16,9 @@ export class HomeComponent implements OnInit {
   doAlert() {
     alert('fuck you')
   }
-  do_pa() {
+  do_pa(e) {
+    // e => 子组件给父组件广播的数据
     alert('爬爬爬爬爬爬爬！！！！');
+    console.log(e);
   }
 }
