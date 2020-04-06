@@ -1,0 +1,7 @@
+<p>news works!</p>
+<button (click)="getData()">get请求数据</button>
+<button (click)="getJsonpData()">获取jsonp数据</button>
+<button (click)="getAxiosData()">通过第三方模块获取服务器数据</button>
+<ul>
+  <li *ngFor="let item of list">{{item.title}}</li>
+</ul>
