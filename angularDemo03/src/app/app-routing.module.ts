@@ -15,13 +15,21 @@ import { NewscontentComponent } from './components/newscontent/newscontent.compo
 
 const routes: Routes = [
   {
-    path: 'home', component: HomeComponent
+    path: 'home', component: HomeComponent,
+    children: [
+      { path: 'welcome', component: WelcomeComponent },
+      { path: 'setting', component: SettingComponent },
+    ]
   },
   {
     path: 'news', component: NewsComponent
   },
   {
-    path: 'product', component: ProductComponent
+    path: 'product', component: ProductComponent,
+    children: [
+      { path: 'pcate', component: PcateComponent },
+      { path: 'plist', component: PlistComponent },
+    ]
   },
   {
     path: 'newscontent/:id', component: NewscontentComponent
